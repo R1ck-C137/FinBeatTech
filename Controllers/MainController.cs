@@ -30,6 +30,7 @@ public class MainController : BaseController
         try
         {
             _mainLogic.SetNewValue(values);
+            
             return new JObject()
             {
                 { "success", true }
@@ -73,6 +74,7 @@ public class MainController : BaseController
         try
         {
             var result = _mainLogic.GetValues(page, countPageLim, filters);
+            
             return new JObject()
             {
                 { "success", true },

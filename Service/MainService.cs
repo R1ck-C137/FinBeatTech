@@ -89,6 +89,7 @@ public class MainService : IMainLogic
         _cacheValues.Clear();
         for (int i = 0; i < listValues.Count; i++)
             _cacheValues.Add(i, new CodeValue(i, listValues[i].code, listValues[i].value));
+        _logger.LogInformation("_cacheValues update");
     }
     
     private List<(int code, string value)> SortByCode(List<Dictionary<string, string>> values)
